@@ -6,19 +6,16 @@
 			"include": "#comments"
 		},
 		{
-			"include": "#keywords"
+			"include": "#strings"
 		},
 		{
-			"include": "#strings"
+			"include": "#functions"
 		},
 		{
 			"include": "#constants"
 		},
 		{
 			"include": "#operators"
-		},
-		{
-			"include": "#functions"
 		}
 	],
 	"repository": {
@@ -67,7 +64,7 @@
 					"match": "(ARRAY_CONSTRAIN(?=\\())"
 				},
 				{
-					"name": "support.function.gsheets",
+					"name": "entity.name.function.gsheets",
 					"match": "(BYCOL(?=\\())"
 				},
 				{
@@ -2128,7 +2125,11 @@
 				},
 				{
 					"name": "keyword.constant.range.gsheets",
-					"match": ""
+					"match": "^(?:'([^']*)'|([^!:]+))!([A-Z]{1,3})([1-9][0-9]*)(?::([A-Z]{1,3})?([1-9][0-9]*)?)?$"
+				},
+				{
+					"name": "keyword.constant.range.gsheets",
+					"match": "(\\w+\\[)([^\\]]+)\\]"
 				},
 				{
 					"name": "keyword.constant.boolean.gsheets",

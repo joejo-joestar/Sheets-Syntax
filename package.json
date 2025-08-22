@@ -2,7 +2,7 @@
   "name": "sheets-language-support",
   "displayName": "Sheets Language Support",
   "description": "a simple syntax highlighting for sheet formulas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.103.0"
   },

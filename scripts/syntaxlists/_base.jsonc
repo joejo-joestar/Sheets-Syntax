@@ -1,0 +1,22 @@
+{
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#functions"
+        }
+    ]
+}

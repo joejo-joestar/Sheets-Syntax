@@ -1,0 +1,22 @@
+{
+    "repository": {
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.gsheets",
+                    "begin": "(\")",
+                    "end": "(\")"
+                },
+                {
+                    "name": "string.quoted.single.gsheets",
+                    "begin": "(')",
+                    "end": "(')"
+                },
+                {
+                    "name": "constant.character.escape.gsheets",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    }
+}
