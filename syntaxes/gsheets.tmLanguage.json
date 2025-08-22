@@ -1,0 +1,2173 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "gsheets",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.gsheets",
+					"begin": "(//)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.gsheets"
+						}
+					},
+					"end": "$\\n?",
+					"patterns": [
+						{
+							"name": "comment.line.double-slash.gsheets",
+							"match": ".+"
+						}
+					]
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.gsheets",
+					"begin": "(\")",
+					"end": "(\")"
+				},
+				{
+					"name": "string.quoted.single.gsheets",
+					"begin": "(')",
+					"end": "(')"
+				},
+				{
+					"name": "constant.character.escape.gsheets",
+					"match": "\\\\."
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ARRAY_CONSTRAIN(?=\\())"
+				},
+				{
+					"name": "support.function.gsheets",
+					"match": "(BYCOL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BYROW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHOOSECOLS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHOOSEROWS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FLATTEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FREQUENCY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GROWTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HSTACK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LINEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOGEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MAKEARRAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MAP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MDETERM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MINVERSE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MMULT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REDUCE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SCAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMPRODUCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMX2MY2(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMX2PY2(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMXMY2(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TOCOL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TOROW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TRANSPOSE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TREND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VSTACK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WRAPCOLS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WRAPROWS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DAVERAGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DCOUNT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DCOUNTA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DGET(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DMAX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DMIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DPRODUCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DSTDEV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DSTDEVP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DSUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DVAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DVARP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DATEDIF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DATEVALUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DAYS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DAYS360(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EDATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EOMONTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EPOCHTODATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HOUR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISOWEEKNUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MINUTE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MONTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NETWORKDAYS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NETWORKDAYS\\.INTL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NOW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SECOND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TIME(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TIMEVALUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TODAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WEEKDAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WEEKNUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WORKDAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WORKDAY\\.INTL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(YEAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(YEARFRAC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BIN2DEC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BIN2HEX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BIN2OCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BITAND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BITLSHIFT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BITOR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BITRSHIFT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BITXOR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COMPLEX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DEC2BIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DEC2HEX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DEC2OCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DELTA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ERF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ERF\\.PRECISE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GESTEP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HEX2BIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HEX2DEC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HEX2OCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMABS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMAGINARY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMARGUMENT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCONJUGATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCOS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCOSH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCOT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCOTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCSC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMCSCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMDIV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMEXP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMLOG(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMLOG10(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMLOG2(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPRODUCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMREAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSEC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSECH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSINH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSUB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMTAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMTANH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(OCT2BIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(OCT2DEC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(OCT2HEX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FILTER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SORT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SORTN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UNIQUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACCRINT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACCRINTM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AMORLINC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPDAYBS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPDAYS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPDAYSNC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPNCD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPNUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUPPCD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CUMIPMT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CUMPRINC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DDB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DISC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DOLLARDE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DOLLARFR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DURATION(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EFFECT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FVSCHEDULE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(INTRATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IPMT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IRR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISPMT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MDURATION(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MIRR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NOMINAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NPER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NPV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PDURATION(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PMT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PPMT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PRICE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PRICEDISC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PRICEMAT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RECEIVED(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RRI(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SLN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SYD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TBILLEQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TBILLPRICE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TBILLYIELD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VDB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(XIRR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(XNPV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(YIELD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(YIELDDISC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(YIELDMAT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ARRAYFORMULA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DETECTLANGUAGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GOOGLEFINANCE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GOOGLETRANSLATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMAGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(QUERY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SPARKLINE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ERROR\\.TYPE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISBLANK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISDATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISEMAIL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISERR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISERROR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISFORMULA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISLOGICAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISNA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISNONTEXT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISNUMBER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISREF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISTEXT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(N(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TYPE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CELL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FALSE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IFERROR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IFNA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LAMBDA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LET(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NOT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(OR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SWITCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TRUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(XOR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ADDRESS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHOOSE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COLUMN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COLUMNS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FORMULATEXT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GETPIVOTDATA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HLOOKUP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(INDEX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(INDIRECT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOOKUP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MATCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(OFFSET(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROWS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VLOOKUP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(XLOOKUP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ABS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACOS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACOSH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACOT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ACOTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ASIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ASINH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ATAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ATAN2(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ATANH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BASE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CEILING(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CEILING\\.MATH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CEILING\\.PRECISE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COMBIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COMBINA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COSH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COTH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNTBLANK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNTIF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNTIFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNTUNIQUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CSC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CSCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DECIMAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DEGREES(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ERFC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ERFC\\.PRECISE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EVEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EXP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FACT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FACTDOUBLE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FLOOR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FLOOR\\.MATH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FLOOR\\.PRECISE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMALN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMALN\\.PRECISE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GCD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMLN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPOWER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMSQRT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(INT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISEVEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISO\\.CEILING(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISODD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LCM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOG(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOG10(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MOD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MROUND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MULTINOMIAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MUNIT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ODD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PI(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(POWER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PRODUCT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(QUOTIENT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RADIANS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RAND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RANDARRAY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RANDBETWEEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROUND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROUNDDOWN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROUNDUP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SEC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SECH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SEQUENCE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SERIESSUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SIGN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SINH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SQRT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SQRTPI(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUBTOTAL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMIF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMIFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUMSQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TANH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TRUNC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ADD(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONCAT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DIVIDE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GTE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISBETWEEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LTE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MINUS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MULTIPLY(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(POW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UMINUS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UNARY_PERCENT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UNIQUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UPLUS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONVERT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TO_DATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TO_DOLLARS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TO_PERCENT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TO_PURE_NUMBER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TO_TEXT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVEDEV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVERAGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVERAGE\\.WEIGHTED(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVERAGEA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVERAGEIF(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(AVERAGEIFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BETA\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BETA\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BETADIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BETAINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BINOM\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BINOM\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(BINOMDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHIDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHIINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHISQ\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHISQ\\.DIST\\.RT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHISQ\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHISQ\\.INV\\.RT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHISQ\\.TEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHITEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONFIDENCE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONFIDENCE\\.NORM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONFIDENCE\\.T(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CORREL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COUNTA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COVAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COVARIANCE\\.P(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(COVARIANCE\\.S(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CRITBINOM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DEVSQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EXPON\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EXPONDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(F\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(F\\.DIST\\.RT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(F\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(F\\.INV\\.RT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(F\\.TEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FISHER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FISHERINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FORECAST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FORECAST\\.LINEAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FTEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMA\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMA\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMADIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAMMAINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GAUSS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(GEOMEAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HARMEAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HYPGEOM\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HYPGEOMDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(INTERCEPT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(KURT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LARGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOGINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOGNORM\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOGNORM\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOGNORMDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MARGINOFERROR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MAX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MAXA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MAXIFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MEDIAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MINA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MINIFS(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MODE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MODE\\.MULT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MODE\\.SNGL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NEGBINOM\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NEGBINOMDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORM\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORM\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORM\\.S\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORM\\.S\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORMDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORMINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORMSDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(NORMSINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PEARSON(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTILE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTILE\\.EXC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTILE\\.INC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTRANK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTRANK\\.EXC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERCENTRANK\\.INC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERMUTATIONA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PERMUT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PHI(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(POISSON(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(POISSON\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PROB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(QUARTILE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(QUARTILE\\.EXC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(QUARTILE\\.INC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RANK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RANK\\.AVG(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RANK\\.EQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RSQ(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SKEW(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SKEW\\.P(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SLOPE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SMALL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STANDARDIZE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEV\\.P(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEV\\.S(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEVA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEVP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STDEVPA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(STEYX(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.DIST\\.2T(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.DIST\\.RT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.INV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.INV\\.2T(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T\\.TEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TDIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TINV(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TRIMMEAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TTEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VAR\\.P(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VAR\\.S(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VARA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VARP(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VARPA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WEIBULL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(WEIBULL\\.DIST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(Z\\.TEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ZTEST(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ARABIC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ASC(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CHAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CLEAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CODE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(CONCATENATE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(DOLLAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(EXACT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FIND(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FINDB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(FIXED(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(JOIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LEFT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LEFTB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LEN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LENB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(LOWER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MID(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(MIDB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(PROPER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REGEXEXTRACT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REGEXMATCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REGEXREPLACE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REPLACE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REPLACEB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(REPT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RIGHT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(RIGHTB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ROMAN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SEARCH(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SEARCHB(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SPLIT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(SUBSTITUTE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(T(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TEXT(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TEXTJOIN(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(TRIM(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UNICHAR(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UNICODE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(UPPER(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(VALUE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ENCODEURL(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(HYPERLINK(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPORTDATA(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPORTFEED(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPORTHTML(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPORTRANGE(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(IMPORTXML(?=\\())"
+				},
+				{
+					"name": "entity.name.function.gsheets",
+					"match": "(ISURL(?=\\())"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "keyword.constant.numeric.decimal.gsheets",
+					"match": "\\b[+-]?\\d(?:[_']?\\d)*\\b"
+				},
+				{
+					"name": "keyword.constant.numeric.floating.gsheets",
+					"match": "\\b[+-]?(?:(?:\\d(?:[_']?\\d)*\\.\\d(?:[_']?\\d)*|\\d(?:[_']?\\d)*\\.|\\.\\d(?:[_']?\\d)*)(?:[eE][+-]?\\d(?:[_']?\\d)*)?|\\d(?:[_']?\\d)*[eE][+-]?\\d(?:[_']?\\d)*)\\b"
+				},
+				{
+					"name": "keyword.constant.range.gsheets",
+					"match": ""
+				},
+				{
+					"name": "keyword.constant.boolean.gsheets",
+					"match": "(TRUE|FALSE)"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arithmetic.gsheets",
+					"match": "(?<!^|\\(|\\+|\\-|\\*|\\/|=|\\s)(\\+)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.gsheets",
+					"match": "(?<!^|\\(|\\+|\\-|\\*|\\/|=|\\s)(-)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.gsheets",
+					"match": "(\\/)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.gsheets",
+					"match": "(\\*)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.gsheets",
+					"match": "(\\^)"
+				},
+				{
+					"name": "keyword.operator.comparison.gsheets",
+					"match": "(?<!^|\\s|\\()(<=|>=|<>|<|>|=)"
+				},
+				{
+					"name": "keyword.operator.concatenation.gsheets",
+					"match": "(&)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.gsheets"
+}

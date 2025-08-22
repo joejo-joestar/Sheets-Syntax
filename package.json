@@ -1,0 +1,36 @@
+{
+  "name": "sheets-language-support",
+  "displayName": "Sheets Language Support",
+  "description": "a simple syntax highlighting for sheet formulas",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "gsheets",
+        "aliases": [
+          "gsheets",
+          "gsheets"
+        ],
+        "extensions": [
+          ".sheet",
+          ".sheets",
+          ".gsheets"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gsheets",
+        "scopeName": "source.gsheets",
+        "path": "./syntaxes/gsheets.tmLanguage.json"
+      }
+    ]
+  }
+}
