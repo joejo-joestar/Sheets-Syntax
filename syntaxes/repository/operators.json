@@ -1,0 +1,37 @@
+[
+    {
+        "comment": "Matches the binary addition operator.",
+        "name": "keyword.operator.arithmetic.gsheets",
+        "match": "(?<!^|\\(|\\+|\\-|\\*|\\/|=|\\s)(\\+)"
+    },
+    {
+        "comment": "Matches the binary subtraction operator.",
+        "name": "keyword.operator.arithmetic.gsheets",
+        "match": "(?<!^|\\(|\\+|\\-|\\*|\\/|=|\\s)(-)"
+    },
+    {
+        "comment": "Matches the division operator (`/`).",
+        "name": "keyword.operator.arithmetic.gsheets",
+        "match": "(\\/)"
+    },
+    {
+        "comment": "Matches the multiplication operator (`*`).",
+        "name": "keyword.operator.arithmetic.gsheets",
+        "match": "(\\*)"
+    },
+    {
+        "comment": "Matches the exponentiation (power) operator (`^`).",
+        "name": "keyword.operator.arithmetic.gsheets",
+        "match": "(\\^)"
+    },
+    {
+        "comment": "Matches all comparison operators.",
+        "name": "keyword.operator.comparison.gsheets",
+        "match": "(?<!^|\\s|\\()(<=|>=|<>|<|>|=)"
+    },
+    {
+        "comment": "Matches the string concatenation operator (`&`).",
+        "name": "keyword.operator.concatenation.gsheets",
+        "match": "(&)"
+    }
+]

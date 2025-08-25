@@ -14,12 +14,13 @@
       {
         "id": "gsheets",
         "aliases": [
-          "gsheets",
+          "gsheet",
           "gsheets"
         ],
         "extensions": [
           ".sheet",
           ".sheets",
+          ".gsheet",
           ".gsheets"
         ],
         "configuration": "./language-configuration.json"

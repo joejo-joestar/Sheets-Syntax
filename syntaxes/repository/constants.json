@@ -1,0 +1,92 @@
+[
+    {
+        "name": "meta.reference.a1.gsheets",
+        "comment": "This is a complex, structured rule that matches all A1-style references (e.g., 'Sheet1'!$A1:C). It uses a begin/end structure so that its inner `patterns` can find and style the individual components (like '$', ':', columns, and rows) separately.",
+        "begin": "(?<=^|[=,(+\\-*/&^<>\\s])(?=(?:'[^']+'|\"[^\"]+\"|\\w+)!\\$?[A-Z]|\\$?[A-Z]{1,3}\\$?[1-9]|\\$?[A-Z]{1,3}:)",
+        "comment:begin": "The rule starts by checking two conditions without consuming characters: 1. A 'lookbehind' `(?<=...)` ensures the reference is preceded by the start of the line or a valid operator/delimiter. 2. A 'lookahead' `(?=...)` ensures the following text looks like a sheet name, a cell with a number, or a column with a colon.",
+        "end": "(?=[,()\\s+\\-*/&^=<>]|$)",
+        "comment:end": "The rule ends when a 'lookahead' `(?=...)` finds a common formula delimiter (like a comma, parenthesis, or another operator) or the end of the line. This cleanly separates the reference from the rest of the formula.",
+        "patterns": [
+            {
+                "name": "constant.other.reference.sheet.gsheets",
+                "comment": "Matches and captures the sheet name and the '!' delimiter separately so they can have different styles.",
+                "match": "((?:'[^']+'|\"[^\"]+\"|\\w+))(!)",
+                "captures": {
+                    "1": {
+                        "name": "entity.name.tag.sheet.gsheets"
+                    },
+                    "2": {
+                        "name": "punctuation.delimiter.sheet.gsheets"
+                    }
+                }
+            },
+            {
+                "name": "keyword.operator.absolute.gsheets",
+                "comment": "Matches the absolute reference operator ($).",
+                "match": "\\$"
+            },
+            {
+                "name": "keyword.operator.range.gsheets",
+                "comment": "Matches the range operator (:).",
+                "match": ":"
+            },
+            {
+                "name": "constant.other.reference.column.gsheets",
+                "comment": "Matches the column part of a reference (e.g., 'A', 'AZ').",
+                "match": "[A-Z]{1,3}"
+            },
+            {
+                "name": "constant.numeric.reference.row.gsheets",
+                "comment": "Matches the row part of a reference (e.g., '1', '1048576').",
+                "match": "[1-9][0-9]*"
+            }
+        ]
+    },
+    {
+        "name": "meta.reference.row-range.gsheets",
+        "comment": "NEW RULE: Specifically captures row-only ranges like '1:3' or '$5:$10' to style them as references, not plain numbers.",
+        "begin": "\\b(?=\\$?[1-9][0-9]*:)",
+        "end": "(?=[,()\\s+\\-*/&^=<>]|$)",
+        "patterns": [
+            {
+                "name": "keyword.operator.absolute.gsheets",
+                "comment": "Matches the absolute reference operator ($).",
+                "match": "\\$"
+            },
+            {
+                "name": "keyword.operator.range.gsheets",
+                "comment": "Matches the range operator (:).",
+                "match": ":"
+            },
+            {
+                "name": "constant.numeric.reference.row.gsheets",
+                "comment": "Matches the row number part of the range.",
+                "match": "[1-9][0-9]*"
+            }
+        ]
+    },
+    {
+        "name": "keyword.constant.other.reference.table.gsheets",
+        "comment": "Matches structured references for named ranges or tables, including special identifiers like '#DATA' (e.g., 'MyTable[#ALL]').",
+        "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\[(#HEADERS|#ALL|#DATA|#TOTALS|@[^\\]]+|[^\\]]+)\\]"
+    },
+    {
+        "name": "keyword.constant.boolean.gsheets",
+        "comment": "Matches the boolean constants TRUE and FALSE. Word boundaries (`\\b`) prevent matching these inside other words (e.g., 'TRUEBLUE').",
+        "match": "\\b(TRUE|FALSE)\\b"
+    },
+    {
+        "name": "entity.name.function.gsheets",
+        "match": "\\b([A-Z_][A-Z0-9_]*)(?=\\()"
+    },
+    {
+        "name": "keyword.constant.numeric.decimal.gsheets",
+        "comment": "Matches whole integer numbers. Allows an optional +/- sign and internal separators for readability (e.g., 1'000'000).",
+        "match": "\\b[+-]?\\d(?:[_']?\\d)*\\b"
+    },
+    {
+        "name": "keyword.constant.numeric.floating.gsheets",
+        "comment": "Matches floating-point (decimal) numbers. Covers numbers with decimal points (e.g., 123.45) and those in scientific E-notation (e.g., 1.23E+4).",
+        "match": "\\b[+-]?(?:(?:\\d(?:[_']?\\d)*\\.\\d(?:[_']?\\d)*|\\d(?:[_']?\\d)*\\.|\\.\\d(?:[_']?\\d)*)(?:[eE][+-]?\\d(?:[_']?\\d)*)?|\\d(?:[_']?\\d)*[eE][+-]?\\d(?:[_']?\\d)*)\\b"
+    }
+]

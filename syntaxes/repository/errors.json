@@ -1,0 +1,7 @@
+[
+    {
+        "name": "constant.language.error.gsheets",
+        "comment": "Matches all built-in error constants by explicitly listing them for accuracy.",
+        "match": "(#NULL!|#DIV\\/0!|#VALUE!|#REF!|#NAME\\?|#NUM!|#N\\/A)"
+    }
+]

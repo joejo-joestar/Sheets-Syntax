@@ -1,0 +1,19 @@
+[
+    {
+        "name": "string.quoted.double.gsheets",
+        "comment": "Matches double-quoted strings.",
+        "begin": "(\")",
+        "end": "(\")"
+    },
+    {
+        "name": "string.quoted.single.gsheets",
+        "comment": "Matches single-quoted strings.",
+        "begin": "(')",
+        "end": "(')"
+    },
+    {
+        "name": "constant.character.escape.gsheets",
+        "comment": "Matches any character escape sequence.",
+        "match": "\\\\."
+    }
+]
