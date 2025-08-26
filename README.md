@@ -1,5 +1,9 @@
 <h1 align="center">📊 Sheets-Language-Support</h1>
 
+<p align = "center">
+  <img src="assets/pixchartcar.png" alt="Language Support Car" title="Language Support Car" width="128">
+</p>
+
 A very simple Visual Studio Code extension for Google Sheets formula syntax highlighting.
 
 >[!WARNING]
