@@ -1,4 +1,4 @@
-<h1 align="center">📊 Sheets-Language-Support</h1>
+<h1 align="center">📊 Sheets-Syntax</h1>
 
 <p align = "center">
   <img src="assets/pixchartcar.png" alt="Language Support Car" title="Language Support Car" width="128">
