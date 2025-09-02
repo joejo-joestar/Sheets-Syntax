@@ -30,14 +30,14 @@
           ".gsheet",
           ".gsheets"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "client/language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "gsheets",
         "scopeName": "source.gsheets",
-        "path": "./syntaxes/gsheets.tmLanguage.json"
+        "path": "client/syntaxes/gsheets.tmLanguage.json"
       }
     ],
     "configuration": {
