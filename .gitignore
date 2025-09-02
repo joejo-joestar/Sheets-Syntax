@@ -2,3 +2,6 @@ node_modules
 *.vsix
 .env
 /testing
+nonproblem.code-workspace
+out
+*.tsbuildinfo
